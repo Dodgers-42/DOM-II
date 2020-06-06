@@ -60,7 +60,7 @@ window.addEventListener('resize', () => {
 
 const body = document.querySelector ('body');
 body.addEventListener('click' , (e) => {
-    // console.log('last');
+    console.log('last');
     body.style.color = 'green';
 });
 
@@ -71,7 +71,7 @@ dest.addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
-const button = document.queryCommandEnabled('.btn');
+const button = document.querySelector ('.btn');
 button.addEventListener('click', (e) => {
     console.log('first');
     button.style.color = 'yellow';
