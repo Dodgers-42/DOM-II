@@ -47,3 +47,33 @@ window.addEventListener('resize', () => {
     vanPic.src = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg";
 });
 
+
+
+
+
+
+
+
+
+
+// event propagation
+
+const body = document.querySelector ('body');
+body.addEventListener('click' , (e) => {
+    // console.log('last');
+    body.style.color = 'green';
+});
+
+const dest = document.querySelector ('.destination');
+dest.addEventListener('click', (e) => {
+    console.log('middle');
+    dest.style.color = 'tomato';
+    e.stopPropagation();
+});
+
+const button = document.queryCommandEnabled('.btn');
+button.addEventListener('click', (e) => {
+    console.log('first');
+    button.style.color = 'yellow';
+    e.stopPropagation();
+});
