@@ -49,14 +49,28 @@ window.addEventListener('resize', () => {
 
 
 // scroll
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
 window.addEventListener('scroll', () => {
-    bodsy.style.backgroundColor = 'black';
+    body.style.backgroundColor = 'black';
 });
 
+// keydown
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'g') {
+        document.body.style = 'color: white; background-color: black;'
 
+    } else if (e.key === '2') {
+        document.body.style = 'color: tomatoe; background-color: green;'
+    }
+});
 
+// wheel event
+
+body.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    console.log('I used a wheel button');
+});
 
 
 
@@ -64,7 +78,7 @@ window.addEventListener('scroll', () => {
 
 const body = document.querySelector ('body');
 body.addEventListener('click' , (e) => {
-    console.log('last');
+    // console.log('last');
     body.style.color = 'green';
 });
 
@@ -85,8 +99,8 @@ button.addEventListener('click', (e) => {
 // preventDefault
 // fix what you want it links to instead of .menu-item and rename 'const link'
 
-const link = document.querySelector('.menu-item');
-link.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('Stopped the link from running');
-});
+// const link = document.querySelector('.menu-item');
+// link.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     console.log('Stopped the link from running');
+// });
