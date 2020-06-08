@@ -77,3 +77,12 @@ button.addEventListener('click', (e) => {
     button.style.color = 'yellow';
     e.stopPropagation();
 });
+
+// preventDefault
+// fix what you want it links to instead of .menu-item and rename 'const link'
+
+const link = document.querySelector('.menu-item');
+link.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('Stopped the link from running');
+});
