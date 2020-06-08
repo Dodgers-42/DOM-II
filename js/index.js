@@ -48,7 +48,11 @@ window.addEventListener('resize', () => {
 });
 
 
-
+// scroll
+const body = document.querySelector('body');
+window.addEventListener('scroll', () => {
+    bodsy.style.backgroundColor = 'black';
+});
 
 
 
