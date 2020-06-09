@@ -50,9 +50,9 @@ window.addEventListener('resize', () => {
 
 // scroll
 // const body = document.querySelector('body');
-window.addEventListener('scroll', () => {
-    body.style.backgroundColor = 'black';
-});
+// window.addEventListener('scroll', () => {
+    // body.style.backgroundColor = 'black';
+// });
 
 // keydown
 
@@ -66,12 +66,23 @@ document.addEventListener('keydown', (e) => {
 });
 
 // wheel event
+// const body = document.querySelector('body');
+// body.addEventListener('wheel', (e) => {
+    // e.preventDefault();
+    // console.log('I used a wheel button');
+// });
 
-body.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    console.log('I used a wheel button');
+// blur
+
+const signMeUp = document.querySelectorAll('.detination .btn');
+
+signMeUp.addEventListener('focus', (event) => {
+  event.target.style.background = 'pink';    
 });
 
+signMeUp.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+});
 
 
 // event propagation
